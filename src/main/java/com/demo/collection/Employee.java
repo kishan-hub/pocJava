@@ -2,8 +2,6 @@ package com.demo.collection;
 
 public class Employee {
 	
-
-
 	private String firstName;
 	
 	private String lastname;
@@ -16,8 +14,7 @@ public class Employee {
 		this.lastname = lastname;
 		this.id = id;
 	}
-
-
+	
 	public String getFirstName() {
 		return firstName;
 	}
