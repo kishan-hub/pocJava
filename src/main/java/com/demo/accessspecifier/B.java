@@ -25,5 +25,4 @@ public class B {
 	        	 System.out.print(arr1[i]);
 	         }
 	     }
-
 }

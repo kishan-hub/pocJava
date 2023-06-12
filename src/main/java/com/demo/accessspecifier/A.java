@@ -1,12 +1,15 @@
 package com.demo.accessspecifier;
 
+import java.sql.Time;
+import java.util.Date;
+
 public class A {
 	
-	private String name;
+	private String name="Kishan";
 	
-	protected String  filename;
+	protected String  filename="A";
 	
-	String date;
+	String date =new Time(1234568568l).toString();
 
 	public String getName() {
 		return name;
@@ -31,6 +34,13 @@ public class A {
 	public void setDate(String date) {
 		this.date = date;
 	}
-	 
+	
+	public static void main(String[] args) {
+	 A aObject =new A();
+	 System.out.println(aObject.name);
+	 System.out.println(aObject.filename);
+	 System.out.println(aObject.date);
+		 
+	}
 
 }
