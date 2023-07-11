@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.IntStream;
 
+import com.demo.array.Employee;
+
 public class ExploreIntStream {
 	
 	public static void main(String[] args) {

@@ -1,25 +1,40 @@
 package com.demo.array;
 
-public class Employee {
 
-  private int empno;
+public class Employee implements Comparable<Employee> {
+
+ public  int empno;
   
-  private String name;
+   public String name;
   
-  private long salary;
+  public long salary;
    
 	public Employee(int empno, String name, long salary) {
-		super();
 		this.empno = empno;
 		this.name = name;
 		this.salary = salary;
 	}
-	 @Override
+	
+	@Override
 	public String toString() {
-		return "Employee [empno=" + empno + ", name=" + name + ", salary=" + salary + "]";
+	String x=Integer.toHexString(hashCode());
+		return getName()+ "-" +x+"-"+getSalary();
+	}
+	 
+     @Override
+	 public int hashCode() {	
+		return empno;
 	}
    
-   public int getEmpno() {
+	@Override
+	 public boolean equals(Object obj1) {
+		// TODO Auto-generated method stub
+		Object obj2=this.empno;
+		return obj1 == obj2;
+	}
+	
+	
+    public int getEmpno() {
 		return empno;
 	}
 
@@ -44,6 +59,22 @@ public class Employee {
 	public void setSalary(long salary) {
 		this.salary = salary;
 	}
-
+	
+	@Override
+	public int compareTo(Employee o1) {
+		// TODO Auto-generated method stub
+		int e1 =o1.empno;
+		int e2=this.empno;
+		int value=0;
+		if(e1>e2) {	
+			value=1;
+		}
+		else if(e1<e2) {
+			value=-1;
+		}
+		else 
+			value=0;
+		return value;
+	}
   
 }
